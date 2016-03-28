@@ -222,7 +222,8 @@ Two websites with C++ Reference, [here](http://en.cppreference.com/w/) and [here
     * Count non-empty clusters in `nonempty`
     * `__numNonempty = nonempty`
 
-5. Implement `KMeans::operator<<`. This should write out the results to a file. A file output stream is supplied by the caller. Only nonempty clusters should be written out, in no particular order, in the following format:
+5. Implement `KMeans::operator<<`. This should write out the results to a file. A file output stream is supplied by the caller.
+ Only nonempty clusters should be written out, in no particular order, in the following format:
 
    ```
    48.9819, 47.4258, 52.0498 : 10440
