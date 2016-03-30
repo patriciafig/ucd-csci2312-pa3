@@ -15,6 +15,7 @@
 namespace Clustering{
     KMeans::KMeans(unsigned int dim, unsigned int k, std::string filename, unsigned int maxIter)
     {
+        std::ifstream file(filename);
 
         __dimensionality = dim;
         __k = k;
@@ -30,6 +31,8 @@ namespace Clustering{
 
     }
 
+
+    //accessors
     unsigned int KMeans::getMaxIter()
     {
 
@@ -42,27 +45,28 @@ namespace Clustering{
         return __numIter;
     }
 
+
     unsigned int KMeans::getNumNonemptyClusters()
     {
-
         return __numNonempty;
     }
 
     unsigned int KMeans::getNumMovesLastIter()
     {
-
         return __numMovesLastIter;
     }
+
 
     Cluster &KMeans::operator[](unsigned int u)
     {
         //return initializer
-
+        return *(__clusters[u]);
     }
 
     const Cluster &KMeans::operator[](unsigned int u) const
     {
         //return initializer
+        return *(__clusters[u]);
 
     }
 
@@ -75,4 +79,5 @@ namespace Clustering{
     {
 
     }
+
 }
